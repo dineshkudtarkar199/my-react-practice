@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+
+.top {
+  width: 100%;
+  height: 60px;
+  /* background-color:  #f2f2f2; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  flex-wrap: wrap;
+  padding: 10px;
+  height: auto;
+}
+
+.top button.active {
+  background-color: orange;
+  color: white;
+  border: none;
+}
+
+.line {
+  border: none;
+  height: 2px;
+  background: rgb(216, 216, 216);
+  margin: 10px 100px;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  width: 100px;
+  height: 50px;
+  border: 2px solid orange;
+  background-color: white;
+  color: orange;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: orange;
+  color: white;
+}
+
+.dish_container {
+  width: 100%;
+  height: auto;
+  /* border-top: 2px solid rgb(211, 138, 1); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.dish_container .dish_card {
+  width: 200px;
+  height: 380px;
+  border: 1px solid orange;
+  margin: 10px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.dish_container .dish_card  h2{
+    font-size: 20px;
+    font-weight: 700;
+    color: #cc2900;
+    margin: 10px 0;
+}
+
+h4{
+    color: #ff0000;
+}
+.dish_container .dish_card img {
+  width: 100%;
+  /* height: 150px; */
+  object-fit: cover;
+}
