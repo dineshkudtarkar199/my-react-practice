@@ -1,64 +1,47 @@
 import React from "react";
 import "./Product_page.css";
 import { useState } from "react";
-import dishes from "./Dishes";
+import alldishes from "./Dishes";
 
 export default function Product_page() {
-  const [dishes, setDishes] = useState(dishes);
-  const [selectedType, setSelectedType] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [dishes, setDishes] = useState(alldishes);
+ 
 
-  const applyFilters = () => {
-    let filtered = dishes;
 
-    if (selectedType) {
-      filtered = filtered.filter(dish => dish.type === selectedType);
-    }
-
-    if (selectedCategory) {
-      filtered = filtered.filter(dish => dish.category === selectedCategory);
-    }
-
-    setDishes(filtered);
-  };
-
-  const resetFilters = () => {
-    setSelectedType("");
-    setSelectedCategory("");
-    setDishes(dishes);
-  };
+  let filterDishes =(x)=>{
+    let fill = alldishes.filter((dish)=>{
+      return dish.type === x;
+    })
+    setDishes(fill);
+  }
 
   return (
     <div>
+      <hr className="line" />
       <div className="top">
-        <h2>Filter by Type</h2>
-        <button onClick={() => { setSelectedType("starter"); applyFilters(); }}>Starters</button>
-        <button onClick={() => { setSelectedType("maincourse"); applyFilters(); }}>Main Course</button>
-        <button onClick={() => { setSelectedType("rice"); applyFilters(); }}>Rice</button>
-        <button onClick={() => { setSelectedType("breads"); applyFilters(); }}>Breads</button>
-        <button onClick={() => { setSelectedType("drinks"); applyFilters(); }}>Drinks</button>
-        <button onClick={() => { setSelectedType("desserts"); applyFilters(); }}>Desserts</button>
+        <button onClick={()=>{filterDishes("sweets")}}>sweets</button>
+        <button onClick={()=>{filterDishes("rice")}}> rice</button>
+        <button onClick={()=>{filterDishes("starters")}}>starters</button>
+        <button onClick={()=>{filterDishes("snacks")}}>snacks</button>
+        <button onClick={()=>{filterDishes("breads")}}>breads</button>
+        <button onClick={()=>{filterDishes("drinks")}}>drinks</button>
+        <button onClick={()=>{setDishes(alldishes)}}>All</button>
       </div>
+      <hr className="line" />
 
-      <div className="top">
-        <h2>Filter by Category</h2>
-        <button onClick={() => { setSelectedCategory("veg"); applyFilters(); }}>Veg</button>
-        <button onClick={() => { setSelectedCategory("nonveg"); applyFilters(); }}>Non-Veg</button>
-        <button onClick={() => { setSelectedCategory("egg"); applyFilters(); }}>Egg</button>
-      </div>
 
-      <div className="top">
-        <button onClick={resetFilters}>Show All</button>
-      </div>
+      
+
+    
 
       <div className="dish_container">
-        {dishes.map((dish, index) => (
-          <div className="dish" key={index}>
-            <h3>{dish.name}</h3>
+        {dishes.map((dish ) => (
+          <div className="dish_card"  >
+            <img src={dish.image} alt="" />
+            <h2>{dish.name}</h2>
+            <h4>₹{dish.price}</h4>
             <p>{dish.desc}</p>
-            <p>₹{dish.price}</p>
-            <p>Type: {dish.type}</p>
-            <p>Category: {dish.category}</p>
+           
           </div>
         ))}
       </div>
