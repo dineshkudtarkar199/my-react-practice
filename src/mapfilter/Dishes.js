@@ -58,40 +58,42 @@ const dishes = [
 
 
   // Added non‑veg items
- [
-  { name: "Butter Chicken", price: 180, desc: "Creamy tomato chicken curry", type: "curries", image: "/dishimages/nonveg1.jpg", category: "chicken" },
-  { name: "Chicken Tikka", price: 160, desc: "Grilled spiced chicken cubes", type: "starters", image: "/dishimages/nonveg2.jpg", category: "chicken" },
-  { name: "Mutton Biryani", price: 220, desc: "Fragrant rice with tender mutton pieces", type: "rice", image: "/dishimages/nonveg3.jpg", category: "mutton" },
-  { name: "Fish Curry", price: 200, desc: "Spicy coastal fish curry", type: "curries", image: "/dishimages/nonveg4.jpg", category: "fish" },
-  { name: "Prawn Masala", price: 210, desc: "Prawns cooked in tangy masala", type: "curries", image: "/dishimages/nonveg5.jpg", category: "prawn" },
-  { name: "Chicken Kebab", price: 140, desc: "Succulent chicken skewers", type: "starters", image: "/dishimages/nonveg6.jpg", category: "chicken" },
-  { name: "Keema Pav", price: 130, desc: "Spiced minced mutton with buns", type: "snacks", image: "/dishimages/nonveg7.jpg", category: "mutton" },
+ 
+   { name: "Butter Chicken", price: 180, desc: "Creamy tomato chicken curry", type: "curries", image: "/dishimages/chicken1.jpg", category: "chicken" },
+  { name: "Chicken Tikka", price: 160, desc: "Grilled spiced chicken cubes", type: "starters", image: "/dishimages/chicken2.jpg", category: "chicken" },
+  { name: "Chicken Kebab", price: 140, desc: "Succulent chicken skewers", type: "starters", image: "/dishimages/chicken3.jpg", category: "chicken" },
+  { name: "Chicken 65", price: 150, desc: "Fried spicy chicken bites", type: "starters", image: "/dishimages/chicken4.jpg", category: "chicken" },
+  { name: "Chicken Biryani", price: 200, desc: "Classic basmati rice with chicken", type: "rice", image: "/dishimages/chicken5.jpg", category: "chicken" },
+  { name: "Chicken Shawarma", price: 170, desc: "Marinated chicken wrap", type: "snacks", image: "/dishimages/chicken6.jpg", category: "chicken" },
+  { name: "Chicken Lollipop", price: 160, desc: "Spicy chicken mid‑wings", type: "starters", image: "/dishimages/chicken7.jpg", category: "chicken" },
+  { name: "Chicken Korma", price: 190, desc: "Creamy nut-based chicken curry", type: "curries", image: "/dishimages/chicken8.jpg", category: "chicken" },
+
   { name: "Egg Bhurji", price: 90, desc: "Spiced scrambled eggs", type: "starters", image: "/dishimages/egg1.jpg", category: "egg" },
   { name: "Egg Curry", price: 120, desc: "Boiled eggs in spicy gravy", type: "curries", image: "/dishimages/egg2.jpg", category: "egg" },
   { name: "Egg Fried Rice", price: 110, desc: "Stir‑fried rice with eggs & veggies", type: "rice", image: "/dishimages/egg3.jpg", category: "egg" },
   { name: "Egg Roll", price: 80, desc: "Wrap stuffed with egg and spices", type: "snacks", image: "/dishimages/egg4.jpg", category: "egg" },
   { name: "Egg Pakora", price: 100, desc: "Deep‑fried egg fritters", type: "starters", image: "/dishimages/egg5.jpg", category: "egg" },
-  { name: "Chicken 65", price: 150, desc: "Fried spicy chicken bites", type: "starters", image: "/dishimages/nonveg8.jpg", category: "chicken" },
-  { name: "Mutton Rogan Josh", price: 230, desc: "Kashmiri-style aromatic lamb curry", type: "curries", image: "/dishimages/nonveg9.jpg", category: "mutton" },
-  { name: "Fish Fry", price: 170, desc: "Crispy fried fish fillets", type: "starters", image: "/dishimages/nonveg10.jpg", category: "fish" },
-  { name: "Chicken Biryani", price: 200, desc: "Classic basmati rice with chicken", type: "rice", image: "/dishimages/nonveg11.jpg", category: "chicken" },
-  { name: "Prawn Fried Rice", price: 190, desc: "Rice tossed with prawns", type: "rice", image: "/dishimages/nonveg12.jpg", category: "prawn" },
   { name: "Egg Pakora", price: 95, desc: "Egg slices coated and fried", type: "starters", image: "/dishimages/egg6.jpg", category: "egg" },
   { name: "Egg Momos", price: 100, desc: "Steamed dumplings with egg filling", type: "starters", image: "/dishimages/egg7.jpg", category: "egg" },
   { name: "Egg Pulao", price: 115, desc: "Spiced rice cooked with eggs", type: "rice", image: "/dishimages/egg8.jpg", category: "egg" },
-  { name: "Chicken Shawarma", price: 170, desc: "Marinated chicken wrap", type: "snacks", image: "/dishimages/nonveg13.jpg", category: "chicken" },
-  { name: "Mutton Keema", price: 140, desc: "Spiced minced lamb curry", type: "curries", image: "/dishimages/nonveg14.jpg", category: "mutton" },
-  { name: "Fish Biryani", price: 210, desc: "Rice cooked with fish and spices", type: "rice", image: "/dishimages/nonveg15.jpg", category: "fish" },
   { name: "Egg Toast", price: 70, desc: "Grilled bread with egg topping", type: "snacks", image: "/dishimages/egg9.jpg", category: "egg" },
   { name: "Egg Dosa", price: 80, desc: "South Indian crepe with egg", type: "snacks", image: "/dishimages/egg10.jpg", category: "egg" },
-  { name: "Chicken Lollipop", price: 160, desc: "Spicy chicken mid‑wings", type: "starters", image: "/dishimages/nonveg16.jpg", category: "chicken" },
-  { name: "Mutton Curry", price: 220, desc: "Traditional slow‑cooked lamb curry", type: "curries", image: "/dishimages/nonveg17.jpg", category: "mutton" },
-  { name: "Prawn Biryani", price: 230, desc: "South Indian style prawn rice", type: "rice", image: "/dishimages/nonveg18.jpg", category: "prawn" },
   { name: "Egg Frankie", price: 85, desc: "Egg roll wrapped in flatbread", type: "snacks", image: "/dishimages/egg11.jpg", category: "egg" },
-  { name: "Chicken Korma", price: 190, desc: "Creamy nut-based chicken curry", type: "curries", image: "/dishimages/nonveg19.jpg", category: "chicken" },
-  { name: "Fish Pulao", price: 195, desc: "Delicate fish pulao rice", type: "rice", image: "/dishimages/nonveg20.jpg", category: "fish" }
-]
 
+  { name: "Fish Curry", price: 200, desc: "Spicy coastal fish curry", type: "curries", image: "/dishimages/fish1.jpg", category: "fish" },
+  { name: "Fish Fry", price: 170, desc: "Crispy fried fish fillets", type: "starters", image: "/dishimages/fish2.jpg", category: "fish" },
+  { name: "Fish Biryani", price: 210, desc: "Rice cooked with fish and spices", type: "rice", image: "/dishimages/fish3.jpg", category: "fish" },
+  { name: "Fish Pulao", price: 195, desc: "Delicate fish pulao rice", type: "rice", image: "/dishimages/fish4.jpg", category: "fish" },
+
+  { name: "Mutton Biryani", price: 220, desc: "Fragrant rice with tender mutton pieces", type: "rice", image: "/dishimages/mutton1.jpg", category: "mutton" },
+  { name: "Keema Pav", price: 130, desc: "Spiced minced mutton with buns", type: "snacks", image: "/dishimages/mutton2.jpg", category: "mutton" },
+  { name: "Mutton Rogan Josh", price: 230, desc: "Kashmiri-style aromatic lamb curry", type: "curries", image: "/dishimages/mutton3.jpg", category: "mutton" },
+  { name: "Mutton Keema", price: 140, desc: "Spiced minced lamb curry", type: "curries", image: "/dishimages/mutton4.jpg", category: "mutton" },
+  { name: "Mutton Curry", price: 220, desc: "Traditional slow‑cooked lamb curry", type: "curries", image: "/dishimages/mutton5.jpg", category: "mutton" },
+
+  { name: "Prawn Masala", price: 210, desc: "Prawns cooked in tangy masala", type: "curries", image: "/dishimages/prawn1.jpg", category: "prawn" },
+  { name: "Prawn Fried Rice", price: 190, desc: "Rice tossed with prawns", type: "rice", image: "/dishimages/prawn2.jpg", category: "prawn" },
+  { name: "Prawn Biryani", price: 230, desc: "South Indian style prawn rice", type: "rice", image: "/dishimages/prawn3.jpg", category: "prawn" }
 
   
 ];

@@ -4,11 +4,14 @@ import { useState } from "react";
 import alldishes from "./Dishes";
 
 export default function Product_page() {
-  const [dishes, setDishes] = useState(alldishes);
+ let [dishes, setDishes] = useState(alldishes);
+
+ let [sel, setSel]= useState("")
  
 
 
   let filterDishes =(x)=>{
+      setSel(x)
     let fill = alldishes.filter((dish)=>{
       return dish.type === x;
     })
@@ -17,15 +20,17 @@ export default function Product_page() {
 
   return (
     <div>
+      <h1>Product Page 1</h1>
+
       <hr className="line" />
       <div className="top">
-        <button onClick={()=>{filterDishes("sweets")}}>sweets</button>
-        <button onClick={()=>{filterDishes("rice")}}> rice</button>
-        <button onClick={()=>{filterDishes("starters")}}>starters</button>
-        <button onClick={()=>{filterDishes("snacks")}}>snacks</button>
-        <button onClick={()=>{filterDishes("breads")}}>breads</button>
-        <button onClick={()=>{filterDishes("drinks")}}>drinks</button>
-        <button onClick={()=>{setDishes(alldishes)}}>All</button>
+        <button   className={(sel === "sweets")?"active":""} onClick={()=>{filterDishes("sweets")}}>sweets</button>
+        <button className={(sel === "rice")?"active":""} onClick={()=>{filterDishes("rice")}}> rice</button>
+        <button className={(sel === "starters")?"active":""} onClick={()=>{filterDishes("starters")}}>starters</button>
+        <button className={(sel === "snacks")?"active":""} onClick={()=>{filterDishes("snacks")}}>snacks</button>
+        <button className={(sel === "breads")?"active":""} onClick={()=>{filterDishes("breads")}}>breads</button>
+        <button className={(sel === "drinks")?"active":""}   onClick={()=>{filterDishes("drinks");   setSel("");}}>drinks</button>
+        <button className={(sel === "")?"active":""} onClick={()=>{setDishes(alldishes)}}>All</button>
       </div>
       <hr className="line" />
 
@@ -39,7 +44,7 @@ export default function Product_page() {
           <div className="dish_card"  >
             <img src={dish.image} alt="" />
             <h2>{dish.name}</h2>
-            <h4>₹{dish.price}</h4>
+            <h4>{dish.price}</h4>
             <p>{dish.desc}</p>
            
           </div>
